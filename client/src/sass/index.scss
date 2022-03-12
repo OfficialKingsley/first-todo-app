@@ -1,0 +1,125 @@
+// Variables
+$theme-dark: #080818;
+$theme-gray: #696969;
+$theme-light: rgb(241, 241, 241);
+
+//General settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+//Main styles
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  .addForm {
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid green;
+      width: 100%;
+      & > * {
+        max-width: 70vw;
+        min-width: 70%;
+      }
+      .reminder-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.7rem;
+      }
+    }
+  }
+  .todos {
+    padding: 1.5rem 0.5rem;
+    .todos-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 4rem;
+    }
+    .todo {
+      margin-bottom: 1rem;
+      padding: 0.5rem 0.5rem;
+      .titleBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+          font-size: 2rem;
+        }
+        span {
+          font-size: 1.5rem;
+          color: red;
+          cursor: pointer;
+          align-self: flex-start;
+          transition: font-size 0.35s ease-in-out;
+          &:hover {
+            font-size: 2rem;
+          }
+        }
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          cursor: pointer;
+          background-color: $theme-dark;
+          color: $theme-light;
+          border: none;
+          padding: 0.3rem 1rem;
+          border-radius: 50px;
+          min-height: 40px;
+        }
+        .edit-button {
+          border-radius: 0px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+//Dark theme styles
+.app.dark {
+  background-color: $theme-dark;
+  color: $theme-light;
+
+  .todos {
+    .todo {
+      background-color: $theme-gray;
+      color: $theme-dark;
+    }
+  }
+}
+
+//Light theme styles
+.app.light {
+  background-color: $theme-light;
+  .todos {
+    .todo {
+      background-color: $theme-dark;
+      color: $theme-light;
+      .titleBar {
+        .title {
+          font-size: 2rem;
+        }
+      }
+      footer {
+        button {
+          background-color: $theme-light;
+          color: $theme-dark;
+        }
+      }
+    }
+  }
+}

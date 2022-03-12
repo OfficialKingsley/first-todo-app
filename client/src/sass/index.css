@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.app .addForm {
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .addForm .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid green;
+  width: 100%;
+}
+
+.app .addForm .inputs > * {
+  max-width: 70vw;
+  min-width: 70%;
+}
+
+.app .addForm .inputs .reminder-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.7rem;
+}
+
+.app .todos {
+  padding: 1.5rem 0.5rem;
+}
+
+.app .todos .todos-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+.app .todos .todo {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.app .todos .todo .titleBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .todos .todo .titleBar .title {
+  font-size: 2rem;
+}
+
+.app .todos .todo .titleBar span {
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: font-size 0.35s ease-in-out;
+  transition: font-size 0.35s ease-in-out;
+}
+
+.app .todos .todo .titleBar span:hover {
+  font-size: 2rem;
+}
+
+.app .todos .todo footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .todos .todo footer button {
+  cursor: pointer;
+  background-color: #080818;
+  color: #f1f1f1;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  min-height: 40px;
+}
+
+.app .todos .todo footer .edit-button {
+  border-radius: 0px;
+  height: auto;
+}
+
+.app.dark {
+  background-color: #080818;
+  color: #f1f1f1;
+}
+
+.app.dark .todos .todo {
+  background-color: #696969;
+  color: #080818;
+}
+
+.app.light {
+  background-color: #f1f1f1;
+}
+
+.app.light .todos .todo {
+  background-color: #080818;
+  color: #f1f1f1;
+}
+
+.app.light .todos .todo .titleBar .title {
+  font-size: 2rem;
+}
+
+.app.light .todos .todo footer button {
+  background-color: #f1f1f1;
+  color: #080818;
+}
+/*# sourceMappingURL=index.css.map */
